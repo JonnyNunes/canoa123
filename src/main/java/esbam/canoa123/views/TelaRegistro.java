@@ -8,16 +8,14 @@ package esbam.canoa123.views;
  *
  * @author ACER
  */
-public class TelaPrincipal extends javax.swing.JFrame {
+public class TelaRegistro extends javax.swing.JFrame {
 
     /**
-     * Creates new form TelaPrincipal
+     * Creates new form TelaRegistro
      */
-    public TelaPrincipal() {
+    public TelaRegistro() {
         initComponents();
-        
-        setSize( 420, 320);
-        setResizable(false);
+        executarHoraData();
     }
 
     /**
@@ -29,56 +27,46 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        mnResgistro = new javax.swing.JMenuItem();
-        mnInfor = new javax.swing.JMenu();
+        nomeResgistro = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jMenu1.setText("Registro");
-
-        mnResgistro.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        mnResgistro.setText("Registrar");
-        mnResgistro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnResgistroActionPerformed(evt);
-            }
-        });
-        jMenu1.add(mnResgistro);
-
-        jMenuBar1.add(jMenu1);
-
-        mnInfor.setText("Informação");
-        jMenuBar1.add(mnInfor);
-
-        setJMenuBar(jMenuBar1);
+        nomeResgistro.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        nomeResgistro.setForeground(new java.awt.Color(0, 27, 226));
+        nomeResgistro.setText("Relogio");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 404, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(nomeResgistro)
+                .addContainerGap(484, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 286, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(nomeResgistro)
+                .addGap(0, 340, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void mnResgistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnResgistroActionPerformed
-        // TODO add your handling code here:
-        CadastarBarcos tableReg = new CadastarBarcos();
-        
-        tableReg.setVisible(true);
-    }//GEN-LAST:event_mnResgistroActionPerformed
-
     /**
      * @param args the command line arguments
      */
+    
+    public void executarHoraData(){
+        java.util.Date data = new java.util.Date();
+        
+        java.text.SimpleDateFormat formatoData = new java.text.SimpleDateFormat("dd/MM/YYYY");
+        java.text.SimpleDateFormat formatoHora = new java.text.SimpleDateFormat("hh:mm:ss");
+        
+        nomeResgistro.setText(formatoData.format(data) + " " + formatoHora.format(data));
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -93,28 +81,25 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaRegistro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaRegistro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaRegistro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaRegistro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaPrincipal().setVisible(true);
+                new TelaRegistro().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenu mnInfor;
-    private javax.swing.JMenuItem mnResgistro;
+    private javax.swing.JLabel nomeResgistro;
     // End of variables declaration//GEN-END:variables
 }

@@ -11,6 +11,9 @@ package esbam.canoa123;
 public class Canoa123 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        esbam.canoa123.views.TelaPrincipal tablePrin = new esbam.canoa123.views.TelaPrincipal();
+        
+        tablePrin.setVisible(true);
     }
 }
