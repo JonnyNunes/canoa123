@@ -3,9 +3,9 @@
   <header>
      
   <p><strong>Projeto com Java - Realização de cadastro e passagem de uma viaja de barcos</strong></p> 
-  <p>Equipe<br></br>
-  <p>Jonny Nunes</p>
-  <p>Gabriel Lopes</p>
+  <p>Equipe
+  <p>Nome: Jonny Nunes</p>
+  <p>Nome: Gabriel Lopes</p>
   </p> <br></br>
   
   </header>
