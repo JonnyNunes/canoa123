@@ -1,13 +1,13 @@
 <html>
   
   <style>
-    
-  </style>
-    header{
+     header{
       background-color: red;
     }
+  </style>
+   
   <header>
-    
+     
   <p><strong>Projeto com Java - Realização de cadastro e passagem de uma viaja de barcos</strong></p> 
   <p>Equipe<br></br>
    Jonny Nunes <br></br>
