@@ -20,7 +20,9 @@
     
   <p>No menu informações poderá conter tabelas dos elementos registrados, podendo ser visto o barcos disponíveis e as passagens em andamentos e os que foram finalizado no    dia, além de outras informações como a data e hora da passagens compradas e informações dos passageiros</p>
   </small>
-  </p>
+  </p> <br></br>
+  
+  <img widht="200px" src="https://github.com/JonnyNunes/canoa123/blob/main/src/main/java/esbam/canoa123/img/SegundaTela.png" alt="ResgistrarElementos" />
   
   </section>
 </html>
