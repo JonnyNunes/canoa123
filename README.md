@@ -3,7 +3,7 @@
   <img widht="200px" src="https://github.com/JonnyNunes/canoa123/blob/main/src/main/java/esbam/canoa123/img/TelaPrincipal.png" alt="TelaPrincipal" />
   <br></b>
   <div>
-  <p style="color:#16106b;">Ola</p>
+  <h1 style="color:#16106b;">Ola</h1>
   </div>
   
 </html>
