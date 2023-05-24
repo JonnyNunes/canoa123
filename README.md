@@ -17,6 +17,8 @@
   <p>
   <small>
   A tela principal possue um menu de barra superior. Nele temos o "Registro" e a "Informações". Basicamente, o menu Registro será implementado as funcionalidades de registrar   os elementos que vão conterem a entidades existentes ao sistema de passagem, como barco, a rota (ponto de partida e destino) e as passagens de cada cliente (passagerios),     esses registro vai direto ao banco. 
+    
+  <p>No menu informações poderá conter tabelas dos elementos registrados, podendo ser visto o barcos disponíveis e as passagens em andamentos e os que foram finalizado no    dia, além de outras informações como a data e hora da passagens compradas e informações dos passageiros</p>
   </small>
   </p>
   
