@@ -36,7 +36,7 @@
   
   <p>
   <small>
-   Nesssa terceira tela, será exibido as informações específicos ao qual o item da tela de registro foi selecionado. Nela, podendo ser responsivo, terá componentes ocultados e alterados (depedendo do item selecionado), e esses componentes pode está em um painel ou outro componentes que é possivel ocultar os componentes. Na programção será definido pela condição do item selecionados, dessa forma pode ser definido a responsividades dos componentes. 
+   Nesssa terceira tela, será exibido as informações específicos ao qual o item da tela de registro foi selecionado. Nela, podendo ser responsivo, terá componentes ocultados e alterados (depedendo do item selecionado), e esses componentes pode está em um painel ou outro componentes que é possivel ocultar os componentes. Na programção será definido as condição para item selecionados, dessa forma pode ser definido a responsividades dos componentes. 
     
   <p>Ainda nessa janela, temos o botão "Cadastrar", o qual será passado por uma validação se todos os campos (principalmente os obrigatórios) estarem preenchidos, senão é exibido uma menssagem e o cadastro não será feito e nem enviado ao banco. Foram isso, se o banco estive conectado, os dados serão enviados ao banco e o cadastro pode ver vizualizado lá no menu "Informações"</p>
   </small>
