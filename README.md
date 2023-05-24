@@ -1,5 +1,5 @@
 <html>
-  <p><strong>Projeto com Java - Realização de cadastro e passagem de uma viaja de barcos</strong></p> 
+  <p style="red;"><strong>Projeto com Java - Realização de cadastro e passagem de uma viaja de barcos</strong></p> 
   <p>Equipe<br></br>
    Jonny Nunes <br></br>
    Gabriel Lopes
