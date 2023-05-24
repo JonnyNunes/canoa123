@@ -22,15 +22,25 @@
   </small>
   </p> <br></br>
   
-  <img widht="200px" src="https://github.com/JonnyNunes/canoa123/blob/main/src/main/java/esbam/canoa123/img/SegundaTela.png" alt="ResgistrarElementos" />
+  <img widht="200px" src="https://github.com/JonnyNunes/canoa123/blob/main/src/main/java/esbam/canoa123/img/SegundaTela.png" alt="ResgistrarElementos" /> <br></br>
   <p>
   <small>
   Nas telas estarão relacionadas, ou seja, é possível ir em uma outra tela com botão específico e da mesma forma conseguindo voltar pra tela anterios com botão "Voltar"
-  (como é mostrado na setar vermelha). Essa tela pode ser mais interativa, nela foi colocado o evento de click na barra de itens (como mostra a seta azul) e esse evento, pelo o que foi selecionado, vai produzir a imagem representativa do item selecionado, ou seja, se for o item "Barcos" é mostrado então o icone de um barco.
+  (como é mostrado na setar vermelha). Essa tela pode ser mais interativa, nela foi colocado o evento de click na barra de itens (como mostra a seta azul) e esse evento, pelo o que foi selecionado, vai produzir a imagem representativa (como mostra a seta amarela) do item selecionado, ou seja, se for o item "Barcos" é mostrado então o icone de um barco.
     
   <p>Além disso, há um botão "Registrar" que vai levar o usuário a uma outra janela o qual terá as informações específicas do item selecionado</p>
   </small>
-  </p>
+  </p> <br></br>
+  
+  <img widht="200px" src="https://github.com/JonnyNunes/canoa123/blob/main/src/main/java/esbam/canoa123/img/Terceira%20Tela.png" alt="Cadastrando" /> <br></br>
+  
+  <p>
+  <small>
+   Nesssa terceira tela, será exibido as informações específicos ao qual o item da tela de registro foi selecionado. Nela, podendo ser responsivo, terá componentes ocultados e alterados (depedendo do item selecionado), e esses componentes pode está em um painel ou outro componentes que é possivel ocultar os componentes. Na programção será definido pela condição do item selecionados, dessa forma pode ser definido a responsividades dos componentes. 
+    
+  <p>Ainda nessa janela, temos o botão "Cadastrar", o qual será passado por uma validação se todos os campos (principalmente os obrigatórios) estarem preenchidos, senão é exibido uma menssagem e o cadastro não será feito e nem enviado ao banco. Foram isso, se o banco estive conectado, os dados serão enviados ao banco e o cadastro pode ver vizualizado lá no menu "Informações"</p>
+  </small>
+  </p> <br></br>
   
   </section>
 </html>
