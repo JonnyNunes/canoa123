@@ -15,9 +15,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
      */
     public TelaPrincipal() {
         initComponents();
-        
-        setSize( 420, 320);
-        setResizable(false);
+        executarComp();
     }
 
     /**
@@ -29,14 +27,21 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar1 = new javax.swing.JMenuBar();
+        barMenus = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         mnResgistro = new javax.swing.JMenuItem();
         mnInfor = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        barMenus.setBackground(new java.awt.Color(4, 81, 65));
+        barMenus.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        barMenus.setBorderPainted(false);
+
+        jMenu1.setForeground(new java.awt.Color(19, 202, 202));
         jMenu1.setText("Registro");
+        jMenu1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenu1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         mnResgistro.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
         mnResgistro.setText("Registrar");
@@ -47,12 +52,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenu1.add(mnResgistro);
 
-        jMenuBar1.add(jMenu1);
+        barMenus.add(jMenu1);
 
+        mnInfor.setForeground(new java.awt.Color(19, 202, 202));
         mnInfor.setText("Informação");
-        jMenuBar1.add(mnInfor);
+        mnInfor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        mnInfor.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        barMenus.add(mnInfor);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(barMenus);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -62,7 +70,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 286, Short.MAX_VALUE)
+            .addGap(0, 282, Short.MAX_VALUE)
         );
 
         pack();
@@ -70,10 +78,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mnResgistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnResgistroActionPerformed
-        // TODO add your handling code here:
-        CadastarBarcos tableReg = new CadastarBarcos();
-        
+        TelaDeRegistro tableReg = new TelaDeRegistro();
         tableReg.setVisible(true);
+        
+        setVisible(false);
     }//GEN-LAST:event_mnResgistroActionPerformed
 
     /**
@@ -104,16 +112,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TelaPrincipal().setVisible(true);
-            }
-        });
+        java.awt.EventQueue.invokeLater(() -> { new TelaPrincipal().setVisible(true); });
+    }
+    
+    private void executarComp(){
+        setSize( 420, 320);
+        
+        setResizable(false);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuBar barMenus;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu mnInfor;
     private javax.swing.JMenuItem mnResgistro;
     // End of variables declaration//GEN-END:variables
