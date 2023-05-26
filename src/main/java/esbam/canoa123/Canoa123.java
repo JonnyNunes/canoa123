@@ -11,8 +11,14 @@ package esbam.canoa123;
 public class Canoa123 {
 
     public static void main(String[] args) {
+        //abrirJanela();
+        esbam.canoa123.controll.DAO.ConnectionMVC.getConnetion();
+    }
+    
+    private static void abrirJanela(){
         
-        esbam.canoa123.views.TelaPrincipal tablePrin = new esbam.canoa123.views.TelaPrincipal();
-        tablePrin.setVisible(true);
+        java.awt.EventQueue.invokeLater(() -> {
+            new esbam.canoa123.views.TelaPrincipal().setVisible(true);
+        });
     }
 }

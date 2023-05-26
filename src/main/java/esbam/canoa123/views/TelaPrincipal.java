@@ -31,8 +31,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         mnResgistro = new javax.swing.JMenuItem();
         mnInfor = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Principal");
 
         barMenus.setBackground(new java.awt.Color(4, 81, 65));
         barMenus.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
@@ -41,7 +44,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu1.setForeground(new java.awt.Color(19, 202, 202));
         jMenu1.setText("Registro");
         jMenu1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenu1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jMenu1.setFont(new java.awt.Font("DokChampa", 1, 14)); // NOI18N
 
         mnResgistro.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
         mnResgistro.setText("Registrar");
@@ -57,8 +60,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
         mnInfor.setForeground(new java.awt.Color(19, 202, 202));
         mnInfor.setText("Informação");
         mnInfor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        mnInfor.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        mnInfor.setFont(new java.awt.Font("DokChampa", 1, 14)); // NOI18N
         barMenus.add(mnInfor);
+
+        jMenu2.setForeground(new java.awt.Color(19, 202, 202));
+        jMenu2.setText("Marcado");
+        jMenu2.setFont(new java.awt.Font("DokChampa", 1, 14)); // NOI18N
+        barMenus.add(jMenu2);
+
+        jMenu3.setForeground(new java.awt.Color(19, 202, 202));
+        jMenu3.setText("Viagem futura");
+        jMenu3.setFont(new java.awt.Font("DokChampa", 1, 14)); // NOI18N
+        barMenus.add(jMenu3);
 
         setJMenuBar(barMenus);
 
@@ -70,7 +83,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 282, Short.MAX_VALUE)
+            .addGap(0, 278, Short.MAX_VALUE)
         );
 
         pack();
@@ -79,9 +92,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void mnResgistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnResgistroActionPerformed
         TelaDeRegistro tableReg = new TelaDeRegistro();
+        this.dispose();
         tableReg.setVisible(true);
-        
-        setVisible(false);
     }//GEN-LAST:event_mnResgistroActionPerformed
 
     /**
@@ -117,13 +129,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
     
     private void executarComp(){
         setSize( 420, 320);
-        
         setResizable(false);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar barMenus;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu mnInfor;
     private javax.swing.JMenuItem mnResgistro;
     // End of variables declaration//GEN-END:variables
