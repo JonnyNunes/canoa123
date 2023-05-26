@@ -26,14 +26,13 @@ public class ConnectionMVC {
         
         try {
             Class.forName(DRIVER);
-        }catch (ClassNotFoundException ex) {
-            System.out.println(ex.getMessage());
+        }catch (ClassNotFoundException ex){
             Logger.getLogger(Connection.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         try{
             conexao = DriverManager.getConnection(URL.concat(BANCO), USER, PASS);
-            javax.swing.JOptionPane.showConfirmDialog(null, "Banco conectado", "Conexão", javax.swing.JOptionPane.OK_CANCEL_OPTION, javax.swing.JOptionPane.INFORMATION_MESSAGE);
+            System.out.println("SUCESSO");
             return conexao;
         }catch(SQLException ex){
             

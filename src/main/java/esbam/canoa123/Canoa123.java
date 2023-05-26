@@ -11,8 +11,7 @@ package esbam.canoa123;
 public class Canoa123 {
 
     public static void main(String[] args) {
-        //abrirJanela();
-        esbam.canoa123.controll.DAO.ConnectionMVC.getConnetion();
+        abrirJanela();
     }
     
     private static void abrirJanela(){

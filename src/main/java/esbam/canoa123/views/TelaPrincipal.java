@@ -4,6 +4,8 @@
  */
 package esbam.canoa123.views;
 
+import java.awt.image.BufferedImage;
+
 /**
  *
  * @author ACER
@@ -13,9 +15,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form TelaPrincipal
      */
+    java.sql.Connection con;
+    
     public TelaPrincipal() {
         initComponents();
         executarComp();
+        inicializa();
     }
 
     /**
@@ -27,6 +32,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblImgBanco = new javax.swing.JLabel();
         barMenus = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         mnResgistro = new javax.swing.JMenuItem();
@@ -65,11 +71,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenu2.setForeground(new java.awt.Color(19, 202, 202));
         jMenu2.setText("Marcado");
+        jMenu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenu2.setFont(new java.awt.Font("DokChampa", 1, 14)); // NOI18N
         barMenus.add(jMenu2);
 
         jMenu3.setForeground(new java.awt.Color(19, 202, 202));
         jMenu3.setText("Viagem futura");
+        jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenu3.setFont(new java.awt.Font("DokChampa", 1, 14)); // NOI18N
         barMenus.add(jMenu3);
 
@@ -79,11 +87,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 404, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblImgBanco, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(343, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 278, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(217, Short.MAX_VALUE)
+                .addComponent(lblImgBanco, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -96,6 +110,38 @@ public class TelaPrincipal extends javax.swing.JFrame {
         tableReg.setVisible(true);
     }//GEN-LAST:event_mnResgistroActionPerformed
 
+    private void executarComp(){
+        setSize( 420, 320);
+        setResizable(false);
+    }
+    
+    private void inicializa(){
+        con = esbam.canoa123.controll.DAO.ConnectionMVC.getConnetion();
+        
+        if(verificaBancoDeDados(con)){
+            lblImgBanco.setIcon(new javax.swing.ImageIcon(altDimen("bancoPositivo")));
+        }else{
+            lblImgBanco.setIcon(new javax.swing.ImageIcon(altDimen("bancoNegativo")));
+        }
+    }
+    
+    private java.awt.Image altDimen(String nomeImg){
+        
+        BufferedImage img = null;
+        
+        try{
+            img = javax.imageio.ImageIO.read(new java.io.File(String.format
+            ("C:\\Projetos\\123Canoa\\canoa123\\src\\main\\java\\esbam\\canoa123\\img\\%s.png", nomeImg)));
+        }catch(java.io.IOException ex){
+            ex.printStackTrace();
+        }
+        
+        java.awt.Image imageDimensionada = img.getScaledInstance
+        (lblImgBanco.getWidth() - 5, lblImgBanco.getHeight() - 5, java.awt.Image.SCALE_SMOOTH);
+                    
+        return imageDimensionada;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -124,12 +170,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> { new TelaPrincipal().setVisible(true); });
+        java.awt.EventQueue.invokeLater(() -> { 
+            new TelaPrincipal().setVisible(true); 
+        });
     }
     
-    private void executarComp(){
-        setSize( 420, 320);
-        setResizable(false);
+    private static boolean verificaBancoDeDados(java.sql.Connection conn){
+        if(conn != null){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -137,6 +188,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JLabel lblImgBanco;
     private javax.swing.JMenu mnInfor;
     private javax.swing.JMenuItem mnResgistro;
     // End of variables declaration//GEN-END:variables
